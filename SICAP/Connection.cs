@@ -15,7 +15,7 @@ namespace SICAP
             //ConnectionString depends on your own datasource
 
             SqlConnection Conn = new SqlConnection();
-            Conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\[code] C#\\Sicap\\remastered\\SICAP\\SICAP\\Database_UNTUNK.mdf;Integrated Security=True";
+            Conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\[code] C#\\Sicap\\remastered\\SICAP\\Aplikasi-Pribadi-SICAP\\SICAP\\Database_UNTUNK.mdf;Integrated Security=True";
             return Conn;
         }
     }
