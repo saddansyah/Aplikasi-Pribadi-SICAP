@@ -6,4 +6,7 @@ Developed by <code>Saddan Syah Akbar</code> from <code>Information Engineering '
  - OOP based application project
  - More simple CRUD
 
- #### Powered by GUNA UI2 Winform 2.0.1.4
+
+<footer>
+ Powered by GUNA UI2 Winform 2.0.1.4
+ </footer>
