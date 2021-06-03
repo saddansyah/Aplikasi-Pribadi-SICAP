@@ -33,8 +33,10 @@ namespace SICAP
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSearch = new System.Windows.Forms.Panel();
+            this.cbSearchCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.tbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlCRUD = new System.Windows.Forms.Panel();
+            this.lblCategoryName = new System.Windows.Forms.Label();
             this.cbItemCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tbItemSPrice = new Guna.UI2.WinForms.Guna2TextBox();
@@ -49,8 +51,6 @@ namespace SICAP
             this.tbItemName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvInventory = new System.Windows.Forms.DataGridView();
-            this.btnAddItem = new Guna.UI2.WinForms.Guna2Button();
-            this.cbSearchCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +59,7 @@ namespace SICAP
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.lblCategoryName = new System.Windows.Forms.Label();
+            this.btnAddItem = new Guna.UI2.WinForms.Guna2Button();
             this.pnlSearch.SuspendLayout();
             this.pnlCRUD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
@@ -74,6 +74,28 @@ namespace SICAP
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Size = new System.Drawing.Size(627, 88);
             this.pnlSearch.TabIndex = 5;
+            // 
+            // cbSearchCategory
+            // 
+            this.cbSearchCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbSearchCategory.Animated = true;
+            this.cbSearchCategory.BackColor = System.Drawing.Color.Transparent;
+            this.cbSearchCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbSearchCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSearchCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSearchCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSearchCategory.FocusedState.Parent = this.cbSearchCategory;
+            this.cbSearchCategory.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cbSearchCategory.ForeColor = System.Drawing.Color.Black;
+            this.cbSearchCategory.HoverState.Parent = this.cbSearchCategory;
+            this.cbSearchCategory.ItemHeight = 30;
+            this.cbSearchCategory.ItemsAppearance.Parent = this.cbSearchCategory;
+            this.cbSearchCategory.Location = new System.Drawing.Point(415, 39);
+            this.cbSearchCategory.Name = "cbSearchCategory";
+            this.cbSearchCategory.ShadowDecoration.Parent = this.cbSearchCategory;
+            this.cbSearchCategory.Size = new System.Drawing.Size(185, 36);
+            this.cbSearchCategory.TabIndex = 8;
+            this.cbSearchCategory.SelectedIndexChanged += new System.EventHandler(this.cbSearchCategory_SelectedIndexChanged);
             // 
             // tbSearch
             // 
@@ -128,6 +150,18 @@ namespace SICAP
             this.pnlCRUD.Name = "pnlCRUD";
             this.pnlCRUD.Size = new System.Drawing.Size(426, 1041);
             this.pnlCRUD.TabIndex = 4;
+            // 
+            // lblCategoryName
+            // 
+            this.lblCategoryName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCategoryName.AutoSize = true;
+            this.lblCategoryName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoryName.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblCategoryName.Location = new System.Drawing.Point(33, 669);
+            this.lblCategoryName.Name = "lblCategoryName";
+            this.lblCategoryName.Size = new System.Drawing.Size(16, 21);
+            this.lblCategoryName.TabIndex = 28;
+            this.lblCategoryName.Text = "-";
             // 
             // cbItemCategory
             // 
@@ -261,12 +295,13 @@ namespace SICAP
             this.tbItemID.Animated = true;
             this.tbItemID.BorderThickness = 3;
             this.tbItemID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbItemID.DefaultText = "";
+            this.tbItemID.DefaultText = "-";
             this.tbItemID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbItemID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbItemID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbItemID.DisabledState.Parent = this.tbItemID;
             this.tbItemID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbItemID.Enabled = false;
             this.tbItemID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbItemID.FocusedState.Parent = this.tbItemID;
             this.tbItemID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -277,8 +312,9 @@ namespace SICAP
             this.tbItemID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbItemID.Name = "tbItemID";
             this.tbItemID.PasswordChar = '\0';
-            this.tbItemID.PlaceholderText = "Add the item ID here";
+            this.tbItemID.PlaceholderText = "ID automatically increment";
             this.tbItemID.SelectedText = "";
+            this.tbItemID.SelectionStart = 1;
             this.tbItemID.ShadowDecoration.Parent = this.tbItemID;
             this.tbItemID.Size = new System.Drawing.Size(359, 35);
             this.tbItemID.TabIndex = 12;
@@ -417,48 +453,6 @@ namespace SICAP
             this.dgvInventory.TabIndex = 7;
             this.dgvInventory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventory_CellClick);
             // 
-            // btnAddItem
-            // 
-            this.btnAddItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddItem.Animated = true;
-            this.btnAddItem.AutoRoundedCorners = true;
-            this.btnAddItem.BorderRadius = 20;
-            this.btnAddItem.CheckedState.Parent = this.btnAddItem;
-            this.btnAddItem.CustomImages.Parent = this.btnAddItem;
-            this.btnAddItem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(146)))), ((int)(((byte)(84)))));
-            this.btnAddItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddItem.ForeColor = System.Drawing.Color.White;
-            this.btnAddItem.HoverState.Parent = this.btnAddItem;
-            this.btnAddItem.Image = global::SICAP.Properties.Resources.baseline_add_white_48;
-            this.btnAddItem.Location = new System.Drawing.Point(415, 98);
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.ShadowDecoration.Parent = this.btnAddItem;
-            this.btnAddItem.Size = new System.Drawing.Size(185, 43);
-            this.btnAddItem.TabIndex = 6;
-            this.btnAddItem.Text = "Add New Item";
-            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
-            // 
-            // cbSearchCategory
-            // 
-            this.cbSearchCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbSearchCategory.Animated = true;
-            this.cbSearchCategory.BackColor = System.Drawing.Color.Transparent;
-            this.cbSearchCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbSearchCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSearchCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSearchCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSearchCategory.FocusedState.Parent = this.cbSearchCategory;
-            this.cbSearchCategory.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cbSearchCategory.ForeColor = System.Drawing.Color.Black;
-            this.cbSearchCategory.HoverState.Parent = this.cbSearchCategory;
-            this.cbSearchCategory.ItemHeight = 30;
-            this.cbSearchCategory.ItemsAppearance.Parent = this.cbSearchCategory;
-            this.cbSearchCategory.Location = new System.Drawing.Point(415, 39);
-            this.cbSearchCategory.Name = "cbSearchCategory";
-            this.cbSearchCategory.ShadowDecoration.Parent = this.cbSearchCategory;
-            this.cbSearchCategory.Size = new System.Drawing.Size(185, 36);
-            this.cbSearchCategory.TabIndex = 8;
-            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "IDBarang";
@@ -541,17 +535,26 @@ namespace SICAP
             this.Column6.Text = "Delete";
             this.Column6.UseColumnTextForButtonValue = true;
             // 
-            // lblCategoryName
+            // btnAddItem
             // 
-            this.lblCategoryName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCategoryName.AutoSize = true;
-            this.lblCategoryName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoryName.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblCategoryName.Location = new System.Drawing.Point(33, 669);
-            this.lblCategoryName.Name = "lblCategoryName";
-            this.lblCategoryName.Size = new System.Drawing.Size(16, 21);
-            this.lblCategoryName.TabIndex = 28;
-            this.lblCategoryName.Text = "-";
+            this.btnAddItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddItem.Animated = true;
+            this.btnAddItem.AutoRoundedCorners = true;
+            this.btnAddItem.BorderRadius = 20;
+            this.btnAddItem.CheckedState.Parent = this.btnAddItem;
+            this.btnAddItem.CustomImages.Parent = this.btnAddItem;
+            this.btnAddItem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(146)))), ((int)(((byte)(84)))));
+            this.btnAddItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddItem.ForeColor = System.Drawing.Color.White;
+            this.btnAddItem.HoverState.Parent = this.btnAddItem;
+            this.btnAddItem.Image = global::SICAP.Properties.Resources.baseline_add_white_48;
+            this.btnAddItem.Location = new System.Drawing.Point(415, 98);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.ShadowDecoration.Parent = this.btnAddItem;
+            this.btnAddItem.Size = new System.Drawing.Size(185, 43);
+            this.btnAddItem.TabIndex = 6;
+            this.btnAddItem.Text = "Add New Item";
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // Form_Inventory
             // 

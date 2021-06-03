@@ -98,6 +98,7 @@ namespace SICAP
                 {
                     Cashier.DeleteCashier(dgvCashier.Rows[e.RowIndex].Cells[2].Value.ToString());
                     Display();
+                    Clear();
                 }
             }
         }

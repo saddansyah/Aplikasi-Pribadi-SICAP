@@ -61,6 +61,8 @@ namespace SICAP
                 cbSearchCategory.Items.Add(items);
             }
 
+            cbSearchCategory.Text = "All";
+
             conn.Close();
         }
 
@@ -74,7 +76,14 @@ namespace SICAP
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
-            GetData.ShowData("SELECT TBL_Barang.IDBarang, TBL_Barang.NamaBarang, TBL_Barang.HargaBeli, TBL_Barang.HargaJual, TBL_Barang.IDKategori, TBL_Kategori.NamaKategori FROM TBL_Barang INNER JOIN TBL_Kategori ON TBL_Barang.IDKategori = TBL_Kategori.IDKategori WHERE TBL_Barang.NamaBarang LIKE '%" + tbSearch.Text + "%'", dgvInventory);
+            if (cbSearchCategory.Text == "All")
+            {
+                GetData.ShowData("SELECT TBL_Barang.IDBarang, TBL_Barang.NamaBarang, TBL_Barang.HargaBeli, TBL_Barang.HargaJual, TBL_Barang.IDKategori, TBL_Kategori.NamaKategori FROM TBL_Barang INNER JOIN TBL_Kategori ON TBL_Barang.IDKategori = TBL_Kategori.IDKategori WHERE TBL_Barang.NamaBarang LIKE '%" + tbSearch.Text + "%'", dgvInventory);
+            }
+            else
+            {
+                GetData.ShowData("SELECT TBL_Barang.IDBarang, TBL_Barang.NamaBarang, TBL_Barang.HargaBeli, TBL_Barang.HargaJual, TBL_Barang.IDKategori, TBL_Kategori.NamaKategori FROM TBL_Barang INNER JOIN TBL_Kategori ON TBL_Barang.IDKategori = TBL_Kategori.IDKategori WHERE TBL_Barang.NamaBarang LIKE '%" + tbSearch.Text + "%' AND TBL_Kategori.NamaKategori ='" + cbSearchCategory.Text +"'", dgvInventory);
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -103,9 +112,12 @@ namespace SICAP
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
+            int count = dgvInventory.Rows.Count;
+
             btnAdd.Text = "Add";
             this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(146)))), ((int)(((byte)(84)))));
             Clear();
+            tbItemID.Text = (++count).ToString();
             tbItemID.Focus();
         }
 
@@ -133,8 +145,9 @@ namespace SICAP
             {
                 if (MessageBox.Show("Are you want to delete this ?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    Cashier.DeleteCashier(dgvInventory.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    Inventory.DeleteItem(Convert.ToInt32(dgvInventory.Rows[e.RowIndex].Cells[2].Value));
                     Display();
+                    Clear();
                 }
             }
         }
@@ -156,6 +169,14 @@ namespace SICAP
                 lblCategoryName.Text = "Not Found";
             }
             conn.Close();
+        }
+
+        private void cbSearchCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbSearchCategory.Text == "All")
+                GetData.ShowData("SELECT TBL_Barang.IDBarang, TBL_Barang.NamaBarang, TBL_Barang.HargaBeli, TBL_Barang.HargaJual, TBL_Barang.IDKategori, TBL_Kategori.NamaKategori FROM TBL_Barang INNER JOIN TBL_Kategori ON TBL_Barang.IDKategori = TBL_Kategori.IDKategori", dgvInventory);
+            else
+                GetData.ShowData("SELECT TBL_Barang.IDBarang, TBL_Barang.NamaBarang, TBL_Barang.HargaBeli, TBL_Barang.HargaJual, TBL_Barang.IDKategori, TBL_Kategori.NamaKategori FROM TBL_Barang INNER JOIN TBL_Kategori ON TBL_Barang.IDKategori = TBL_Kategori.IDKategori WHERE TBL_Kategori.NamaKategori = '" + cbSearchCategory.Text +"'", dgvInventory);
         }
     }
 }
