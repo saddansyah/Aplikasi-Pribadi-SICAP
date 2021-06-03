@@ -2,7 +2,7 @@
 ### Simple Cashier App
 Developed by <code>Saddan Syah Akbar</code> from <code>Information Engineering '20</code> 
 
- ## Feature:
+ ## Features:
  - Cashier/Seller Management
  - Inventory Management
  - Shopping Cart System
