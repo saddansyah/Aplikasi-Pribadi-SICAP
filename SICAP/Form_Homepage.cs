@@ -104,11 +104,6 @@ namespace SICAP
             currentButton.Checked = true;
         }
 
-        private void btnCashier_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Form_Cashier(), btnCashier);
-        }
-
         private void btnManagement_Click(object sender, EventArgs e)
         {
             ShowSubMenu(pnlSubManagement);
@@ -124,9 +119,19 @@ namespace SICAP
                 
         }
 
+        private void btnCashier_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Form_Cashier(), btnCashier);
+        }
+
         private void btnInventory_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Form_Inventory(), btnInventory);
+        }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Form_Category(), btnCategory);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

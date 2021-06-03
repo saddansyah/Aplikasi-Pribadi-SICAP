@@ -38,25 +38,26 @@ namespace SICAP
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Cashier new_cashier =  new Cashier(tbUsername.Text.Trim(), tbCashierName.Text.Trim(), tbCashierPassword.Text.Trim(), cbCashierLevel.Text.Trim()); ;
+            Cashier new_cashier;
             if (tbUsername.Text == "" || tbCashierName.Text == "" || tbCashierPassword.Text == "" || cbCashierLevel.Text == "")
             {
                 MessageBox.Show("Fill out the blank textbox!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Clear();
             }
             else if(btnAdd.Text == "Add")
-            { 
+            {
+                new_cashier = new Cashier(tbUsername.Text.Trim(), tbCashierName.Text.Trim(), tbCashierPassword.Text.Trim(), cbCashierLevel.Text.Trim());
                 Cashier.AddCashier(new_cashier);
                 Clear();
                 Display();
             }
             else if(btnAdd.Text == "Update")
             {
+                new_cashier = new Cashier(tbUsername.Text.Trim(), tbCashierName.Text.Trim(), tbCashierPassword.Text.Trim(), cbCashierLevel.Text.Trim());
                 Cashier.UpdateCashier(new_cashier, tbUsername.Text.Trim());
                 Clear();
                 Display();
-                btnAdd.Text = "Add";
-                this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(146)))), ((int)(((byte)(84)))));
+                btnAddItem_Click(sender, e);
             }
         }
         private void btnAddItem_Click(object sender, EventArgs e)
@@ -91,14 +92,14 @@ namespace SICAP
 
                 tbUsername.Focus();
             }
-
-            if (e.ColumnIndex == 1)
+            else if (e.ColumnIndex == 1)
             {
                 if (MessageBox.Show("Are you want to delete this ?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     Cashier.DeleteCashier(dgvCashier.Rows[e.RowIndex].Cells[2].Value.ToString());
                     Display();
                     Clear();
+                    btnAddItem_Click(sender, e);
                 }
             }
         }

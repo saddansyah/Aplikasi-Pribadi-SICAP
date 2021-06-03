@@ -72,7 +72,7 @@ namespace SICAP
 
         public static void UpdateCashier(Cashier cashier, string username)
         {
-            string query = "UPDATE TBL_Kasir SET NamaKasir = @CashierName, PasswordKasir = @CashierPass, LevelKasir = @CashierLevel WHERE Username = @Username";
+            string query = "UPDATE TBL_Kasir SET Username = @Username, NamaKasir = @CashierName, PasswordKasir = @CashierPass, LevelKasir = @CashierLevel WHERE Username = @Username";
            
             SqlConnection conn = Connection.GetConn();
             conn.Open();

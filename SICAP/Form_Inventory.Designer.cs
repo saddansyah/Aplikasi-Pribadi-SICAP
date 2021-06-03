@@ -29,13 +29,14 @@ namespace SICAP
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSearch = new System.Windows.Forms.Panel();
             this.cbSearchCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.tbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlCRUD = new System.Windows.Forms.Panel();
+            this.pnlCategory = new System.Windows.Forms.Panel();
             this.lblCategoryName = new System.Windows.Forms.Label();
             this.cbItemCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -62,6 +63,7 @@ namespace SICAP
             this.btnAddItem = new Guna.UI2.WinForms.Guna2Button();
             this.pnlSearch.SuspendLayout();
             this.pnlCRUD.SuspendLayout();
+            this.pnlCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,7 +133,7 @@ namespace SICAP
             // pnlCRUD
             // 
             this.pnlCRUD.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pnlCRUD.Controls.Add(this.lblCategoryName);
+            this.pnlCRUD.Controls.Add(this.pnlCategory);
             this.pnlCRUD.Controls.Add(this.cbItemCategory);
             this.pnlCRUD.Controls.Add(this.label6);
             this.pnlCRUD.Controls.Add(this.tbItemSPrice);
@@ -151,17 +153,28 @@ namespace SICAP
             this.pnlCRUD.Size = new System.Drawing.Size(426, 1041);
             this.pnlCRUD.TabIndex = 4;
             // 
+            // pnlCategory
+            // 
+            this.pnlCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCategory.BackColor = System.Drawing.Color.White;
+            this.pnlCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlCategory.Controls.Add(this.lblCategoryName);
+            this.pnlCategory.Location = new System.Drawing.Point(37, 670);
+            this.pnlCategory.Name = "pnlCategory";
+            this.pnlCategory.Size = new System.Drawing.Size(357, 147);
+            this.pnlCategory.TabIndex = 29;
+            // 
             // lblCategoryName
             // 
-            this.lblCategoryName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCategoryName.AutoSize = true;
+            this.lblCategoryName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCategoryName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoryName.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblCategoryName.Location = new System.Drawing.Point(33, 669);
+            this.lblCategoryName.Location = new System.Drawing.Point(0, 0);
             this.lblCategoryName.Name = "lblCategoryName";
-            this.lblCategoryName.Size = new System.Drawing.Size(16, 21);
+            this.lblCategoryName.Size = new System.Drawing.Size(357, 147);
             this.lblCategoryName.TabIndex = 28;
             this.lblCategoryName.Text = "-";
+            this.lblCategoryName.Click += new System.EventHandler(this.lblCategoryName_Click);
             // 
             // cbItemCategory
             // 
@@ -182,7 +195,7 @@ namespace SICAP
             this.cbItemCategory.Location = new System.Drawing.Point(37, 618);
             this.cbItemCategory.Name = "cbItemCategory";
             this.cbItemCategory.ShadowDecoration.Parent = this.cbItemCategory;
-            this.cbItemCategory.Size = new System.Drawing.Size(223, 36);
+            this.cbItemCategory.Size = new System.Drawing.Size(82, 36);
             this.cbItemCategory.TabIndex = 27;
             this.cbItemCategory.SelectedIndexChanged += new System.EventHandler(this.cbItemCategory_SelectedIndexChanged);
             // 
@@ -421,14 +434,14 @@ namespace SICAP
             this.dgvInventory.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInventory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvInventory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvInventory.ColumnHeadersHeight = 45;
             this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvInventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -502,12 +515,12 @@ namespace SICAP
             // 
             // Column5
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(239)))));
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(239)))));
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle14;
             this.Column5.FillWeight = 64.6355F;
             this.Column5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Column5.HeaderText = "";
@@ -519,13 +532,13 @@ namespace SICAP
             // 
             // Column6
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(68)))), ((int)(((byte)(141)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(45)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(68)))), ((int)(((byte)(141)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(45)))), ((int)(((byte)(69)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle15;
             this.Column6.FillWeight = 65.3351F;
             this.Column6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Column6.HeaderText = "";
@@ -572,6 +585,7 @@ namespace SICAP
             this.pnlSearch.ResumeLayout(false);
             this.pnlCRUD.ResumeLayout(false);
             this.pnlCRUD.PerformLayout();
+            this.pnlCategory.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             this.ResumeLayout(false);
 
@@ -607,5 +621,6 @@ namespace SICAP
         private System.Windows.Forms.DataGridViewButtonColumn Column5;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
         private System.Windows.Forms.Label lblCategoryName;
+        private System.Windows.Forms.Panel pnlCategory;
     }
 }

@@ -188,6 +188,7 @@ namespace SICAP
             this.btnCategory.TabIndex = 4;
             this.btnCategory.Text = "Category";
             this.btnCategory.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
             // btnInventory
             // 
@@ -244,6 +245,8 @@ namespace SICAP
             // btnManagement
             // 
             this.btnManagement.Animated = true;
+            this.btnManagement.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(239)))));
+            this.btnManagement.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btnManagement.CheckedState.Parent = this.btnManagement;
             this.btnManagement.CustomImages.Parent = this.btnManagement;
             this.btnManagement.Dock = System.Windows.Forms.DockStyle.Top;

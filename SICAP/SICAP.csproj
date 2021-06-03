@@ -70,8 +70,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cashier.cs" />
+    <Compile Include="Category.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="GetData.cs" />
+    <Compile Include="Form_Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Category.Designer.cs">
+      <DependentUpon>Form_Category.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Inventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +112,9 @@
     <Compile Include="Inventory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_Category.resx">
+      <DependentUpon>Form_Category.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Inventory.resx">
       <DependentUpon>Form_Inventory.cs</DependentUpon>
     </EmbeddedResource>

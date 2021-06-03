@@ -75,7 +75,7 @@ namespace SICAP
 
         public static void UpdateItem(Inventory inventory, int id)
         {
-            string query = "UPDATE TBL_Barang SET IDBarang = @ID, NamaBarang = @ItemName, HargaBeli = @ItemMPrice, HargaJual = @ItemSPrice, IDKategori = @IDCtg WHERE IDBarang = @ID";     
+            string query = "UPDATE TBL_Barang SET NamaBarang = @ItemName, HargaBeli = @ItemMPrice, HargaJual = @ItemSPrice, IDKategori = @IDCtg WHERE IDBarang = @ID";     
 
             SqlConnection conn = Connection.GetConn();
             conn.Open();

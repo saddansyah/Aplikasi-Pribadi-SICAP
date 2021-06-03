@@ -18,8 +18,6 @@ D:\[code] C#\Sicap\remastered\SICAP\SICAP\obj\Debug\SICAP.Form_SignUp.resources
 D:\[code] C#\Sicap\remastered\SICAP\SICAP\bin\Debug\Database_UNTUNK.mdf
 D:\[code] C#\Sicap\remastered\SICAP\SICAP\bin\Debug\Database_UNTUNK_log.ldf
 D:\[code] C#\Sicap\remastered\SICAP\SICAP\obj\Debug\SICAP.Form_Inventory.resources
-D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\bin\Debug\Database_UNTUNK.mdf
-D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\bin\Debug\Database_UNTUNK_log.ldf
 D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\bin\Debug\SICAP.exe.config
 D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\bin\Debug\SICAP.exe
 D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\bin\Debug\SICAP.pdb
@@ -38,3 +36,6 @@ D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\obj\Debug\SICAP
 D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\obj\Debug\SICAP.csproj.CopyComplete
 D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\obj\Debug\SICAP.exe
 D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\obj\Debug\SICAP.pdb
+D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\bin\Debug\Database_UNTUNK.mdf
+D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\bin\Debug\Database_UNTUNK_log.ldf
+D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\obj\Debug\SICAP.Form_Category.resources
