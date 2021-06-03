@@ -3,9 +3,14 @@
 Developed by <code>Saddan Syah Akbar</code> from <code>Information Engineering '20</code> 
 
  ## Feature:
+ - Cashier/Seller Management
+ - Inventory Management
+ - Shopping Cart System
+ - Sales Report and Analysis
+ - Using Local SQL Database
  - Responsive UI Windows Form Design
  - OOP based application project
- - More simple CRUD
+
 
 
 
