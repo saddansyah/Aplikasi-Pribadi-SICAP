@@ -21,6 +21,7 @@ namespace SICAP
 
         private void Form_Cashier_Load(object sender, EventArgs e)
         {
+            Clear();
             Display();
         }
 
@@ -37,25 +38,25 @@ namespace SICAP
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Cashier new_cashier;
+            Cashier new_cashier =  new Cashier(tbUsername.Text.Trim(), tbCashierName.Text.Trim(), tbCashierPassword.Text.Trim(), cbCashierLevel.Text.Trim()); ;
             if (tbUsername.Text == "" || tbCashierName.Text == "" || tbCashierPassword.Text == "" || cbCashierLevel.Text == "")
             {
                 MessageBox.Show("Fill out the blank textbox!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Clear();
             }
             else if(btnAdd.Text == "Add")
-            {
-                new_cashier = new Cashier(tbUsername.Text.Trim(), tbCashierName.Text.Trim(), tbCashierPassword.Text.Trim(), cbCashierLevel.Text.Trim());
+            { 
                 Cashier.AddCashier(new_cashier);
                 Clear();
                 Display();
             }
             else if(btnAdd.Text == "Update")
             {
-                new_cashier = new Cashier(tbUsername.Text.Trim(), tbCashierName.Text.Trim(), tbCashierPassword.Text.Trim(), cbCashierLevel.Text.Trim());
                 Cashier.UpdateCashier(new_cashier, tbUsername.Text.Trim());
                 Clear();
                 Display();
+                btnAdd.Text = "Add";
+                this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(146)))), ((int)(((byte)(84)))));
             }
         }
         private void btnAddItem_Click(object sender, EventArgs e)
@@ -69,7 +70,6 @@ namespace SICAP
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            tbUsername.Text = tbCashierName.Text = tbCashierPassword.Text = cbCashierLevel.Text = string.Empty;
             Clear();
         }
 

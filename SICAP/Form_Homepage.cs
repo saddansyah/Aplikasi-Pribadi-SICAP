@@ -15,7 +15,6 @@ namespace SICAP
     {
         private SqlCommand cmd;
         private SqlDataReader rd;
-        private readonly Connection Konn = new Connection();
         private string usernameValidation, sellerName;
 
 

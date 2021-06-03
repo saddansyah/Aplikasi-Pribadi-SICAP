@@ -102,6 +102,7 @@
     <Compile Include="Form_SignUp.Designer.cs">
       <DependentUpon>Form_SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Inventory.resx">
