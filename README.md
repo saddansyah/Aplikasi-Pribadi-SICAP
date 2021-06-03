@@ -7,6 +7,4 @@ Developed by <code>Saddan Syah Akbar</code> from <code>Information Engineering '
  - More simple CRUD
 
 
-</hr>
-Powered by GUNA UI2 Winform 2.0.1.4
 
