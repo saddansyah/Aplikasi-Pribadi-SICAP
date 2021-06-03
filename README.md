@@ -1,4 +1,5 @@
-# Aplikasi-Pribadi-SICAP
+# SICAP
+### Simple Cashier App
 Developed by <code>Saddan Syah Akbar</code> from <code>Information Engineering '20</code> 
 
  ## Feature:
