@@ -78,6 +78,18 @@
     <Compile Include="Form_Cart.Designer.cs">
       <DependentUpon>Form_Cart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_History.Designer.cs">
+      <DependentUpon>Form_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Receipt.Designer.cs">
+      <DependentUpon>Form_Receipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="GetData.cs" />
     <Compile Include="Form_Category.cs">
       <SubType>Form</SubType>
@@ -126,6 +138,9 @@
     <EmbeddedResource Include="Form_Category.resx">
       <DependentUpon>Form_Category.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_History.resx">
+      <DependentUpon>Form_History.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Inventory.resx">
       <DependentUpon>Form_Inventory.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Receipt.resx">
+      <DependentUpon>Form_Receipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_SignUp.resx">
       <DependentUpon>Form_SignUp.cs</DependentUpon>
@@ -242,6 +260,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database_UNTUNK.mdf</DependentUpon>
     </Content>
+    <None Include="img\sharp_history_white_48 - Copy.png" />
+    <None Include="img\SICAP icon.png" />
     <None Include="img\outline_payments_white_48.png" />
     <None Include="img\round_clear_white_48.png" />
     <None Include="img\sharp_shopping_cart_grey_48_2.png" />

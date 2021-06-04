@@ -16,6 +16,7 @@ namespace SICAP
         public int Price { get; set; }
         public int Qty { get; set; }
         public int Total { get; set; }
+        public int Profit { get; set; }
         private string Seller, Date;
 
         public Order(int id, string name, int price, int qty, string seller)
@@ -25,7 +26,7 @@ namespace SICAP
             Price = price;
             Qty = qty;
             Seller = seller;
-            Date = DateTime.Today.Day.ToString() + "-" + DateTime.Today.Month.ToString() + "-" + DateTime.Today.Year.ToString();
+            Date = DateTime.Today.Day.ToString() + "-" + DateTime.Now.ToString("MMMM") + "-" + DateTime.Today.Year.ToString();
         }
 
         public Order()

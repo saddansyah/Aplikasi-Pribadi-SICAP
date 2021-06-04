@@ -253,6 +253,16 @@ namespace SICAP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sharp_history_white_48___Copy {
+            get {
+                object obj = ResourceManager.GetObject("sharp_history_white_48 - Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sharp_inventory_2_white_48 {
             get {
                 object obj = ResourceManager.GetObject("sharp_inventory_2_white_48", resourceCulture);
@@ -306,6 +316,16 @@ namespace SICAP.Properties {
         internal static System.Drawing.Bitmap sharp_shopping_cart_white_48 {
             get {
                 object obj = ResourceManager.GetObject("sharp_shopping_cart_white_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SICAP_icon {
+            get {
+                object obj = ResourceManager.GetObject("SICAP icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

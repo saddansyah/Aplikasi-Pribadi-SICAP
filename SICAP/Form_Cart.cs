@@ -162,7 +162,7 @@ namespace SICAP
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure ?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure ?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 new_order.Buy(new_order);
 
