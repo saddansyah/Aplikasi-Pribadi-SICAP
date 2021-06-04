@@ -134,6 +134,11 @@ namespace SICAP
             OpenChildForm(new Form_Category(), btnCategory);
         }
 
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Form_Cart(sellerName), btnCart);
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Close();

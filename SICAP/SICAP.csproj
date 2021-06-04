@@ -72,6 +72,12 @@
     <Compile Include="Cashier.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Connection.cs" />
+    <Compile Include="Form_Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cart.Designer.cs">
+      <DependentUpon>Form_Cart.cs</DependentUpon>
+    </Compile>
     <Compile Include="GetData.cs" />
     <Compile Include="Form_Category.cs">
       <SubType>Form</SubType>
@@ -110,8 +116,13 @@
       <DependentUpon>Form_SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="Payment.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_Cart.resx">
+      <DependentUpon>Form_Cart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Category.resx">
       <DependentUpon>Form_Category.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,19 +143,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -231,6 +242,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database_UNTUNK.mdf</DependentUpon>
     </Content>
+    <None Include="img\outline_payments_white_48.png" />
+    <None Include="img\round_clear_white_48.png" />
+    <None Include="img\sharp_shopping_cart_grey_48_2.png" />
     <None Include="img\baseline_add_white_48.png" />
     <None Include="img\baseline_search_black_48.png" />
   </ItemGroup>

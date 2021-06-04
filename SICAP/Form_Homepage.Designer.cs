@@ -67,7 +67,7 @@ namespace SICAP
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(279, 1041);
+            this.pnlMenu.Size = new System.Drawing.Size(279, 937);
             this.pnlMenu.TabIndex = 0;
             // 
             // btnLogout
@@ -85,7 +85,7 @@ namespace SICAP
             this.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(45)))), ((int)(((byte)(69)))));
             this.btnLogout.HoverState.Parent = this.btnLogout;
             this.btnLogout.Image = global::SICAP.Properties.Resources.round_power_settings_new_white_48;
-            this.btnLogout.Location = new System.Drawing.Point(12, 984);
+            this.btnLogout.Location = new System.Drawing.Point(12, 880);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
             this.btnLogout.Size = new System.Drawing.Size(250, 45);
@@ -136,6 +136,9 @@ namespace SICAP
             // btnCart
             // 
             this.btnCart.Animated = true;
+            this.btnCart.CheckedState.FillColor = System.Drawing.SystemColors.Control;
+            this.btnCart.CheckedState.ForeColor = System.Drawing.Color.Gray;
+            this.btnCart.CheckedState.Image = global::SICAP.Properties.Resources.sharp_shopping_cart_white_48;
             this.btnCart.CheckedState.Parent = this.btnCart;
             this.btnCart.CustomImages.Parent = this.btnCart;
             this.btnCart.Dock = System.Windows.Forms.DockStyle.Top;
@@ -143,7 +146,7 @@ namespace SICAP
             this.btnCart.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCart.ForeColor = System.Drawing.Color.White;
             this.btnCart.HoverState.Parent = this.btnCart;
-            this.btnCart.Image = global::SICAP.Properties.Resources.sharp_shopping_cart_white_48;
+            this.btnCart.Image = global::SICAP.Properties.Resources.sharp_shopping_cart_grey_48_2;
             this.btnCart.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCart.Location = new System.Drawing.Point(0, 339);
             this.btnCart.Name = "btnCart";
@@ -152,6 +155,7 @@ namespace SICAP
             this.btnCart.TabIndex = 2;
             this.btnCart.Text = "Cart";
             this.btnCart.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
             // pnlSubManagement
             // 
@@ -320,14 +324,14 @@ namespace SICAP
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlChildForm.Location = new System.Drawing.Point(279, 0);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(1206, 1041);
+            this.pnlChildForm.Size = new System.Drawing.Size(1206, 937);
             this.pnlChildForm.TabIndex = 1;
             // 
             // pbHomepage
             // 
             this.pbHomepage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbHomepage.Image = global::SICAP.Properties.Resources.Homepage_01;
-            this.pbHomepage.Location = new System.Drawing.Point(-228, 0);
+            this.pbHomepage.Location = new System.Drawing.Point(-228, -52);
             this.pbHomepage.Name = "pbHomepage";
             this.pbHomepage.Size = new System.Drawing.Size(1662, 1041);
             this.pbHomepage.TabIndex = 0;
@@ -337,11 +341,11 @@ namespace SICAP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1485, 1041);
+            this.ClientSize = new System.Drawing.Size(1485, 937);
             this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.pnlMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(290, 553);
+            this.MinimumSize = new System.Drawing.Size(290, 586);
             this.Name = "Form_Homepage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Homepage";

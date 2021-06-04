@@ -143,9 +143,39 @@ namespace SICAP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap outline_payments_white_48 {
+            get {
+                object obj = ResourceManager.GetObject("outline_payments_white_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap round_account_circle_white_48 {
             get {
                 object obj = ResourceManager.GetObject("round_account_circle_white_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap round_clear_white_48 {
+            get {
+                object obj = ResourceManager.GetObject("round_clear_white_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap round_clear_white_481 {
+            get {
+                object obj = ResourceManager.GetObject("round_clear_white_481", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +286,16 @@ namespace SICAP.Properties {
         internal static System.Drawing.Bitmap sharp_person_white_48___Copy {
             get {
                 object obj = ResourceManager.GetObject("sharp_person_white_48 - Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sharp_shopping_cart_grey_48_2 {
+            get {
+                object obj = ResourceManager.GetObject("sharp_shopping_cart_grey_48_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
