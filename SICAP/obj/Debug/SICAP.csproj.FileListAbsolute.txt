@@ -42,3 +42,4 @@ D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\obj\Debug\SICAP
 D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\obj\Debug\SICAP.Form_Cart.resources
 D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\obj\Debug\SICAP.Form_History.resources
 D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\obj\Debug\SICAP.Form_Receipt.resources
+D:\[code] C#\Sicap\remastered\SICAP\Aplikasi-Pribadi-SICAP\SICAP\obj\Debug\SICAP.Form_About.resources

@@ -72,6 +72,12 @@
     <Compile Include="Cashier.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Connection.cs" />
+    <Compile Include="Form_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_About.Designer.cs">
+      <DependentUpon>Form_About.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Cart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     <Compile Include="Order.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_About.resx">
+      <DependentUpon>Form_About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Cart.resx">
       <DependentUpon>Form_Cart.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +268,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database_UNTUNK.mdf</DependentUpon>
     </Content>
+    <None Include="img\SICAP icon - Copy.png" />
+    <None Include="img\AboutSICAP-02.png" />
     <None Include="img\sharp_history_white_48 - Copy.png" />
     <None Include="img\SICAP icon.png" />
     <None Include="img\outline_payments_white_48.png" />

@@ -118,85 +118,91 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="outline_payments_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\outline_payments_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="round_account_circle_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\round_account_circle_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sharp_shopping_cart_grey_48_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\sharp_shopping_cart_grey_48_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="round_face_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\round_face_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sharp_person_white_48 - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\sharp_person_white_48 - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="round_clear_white_481" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\round_clear_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sharp_person_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\sharp_person_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sharp_inventory_2_white_48 - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\sharp_inventory_2_white_48 - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="baseline_add_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\baseline_add_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="baseline_search_black_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\baseline_search_black_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="round_clear_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\round_clear_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sharp_inventory_2_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\sharp_inventory_2_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Logo - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sharp_category_white_48 - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\sharp_category_white_48 - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LoginPage-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\LoginPage-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="round_power_settings_new_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\round_power_settings_new_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo-01-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Logo-01-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sharp_history_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\sharp_history_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SICAP icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\SICAP icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LoginPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\LoginPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="round_storage_black_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\round_storage_black_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoginPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\LoginPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="round_clear_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\round_clear_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Homepage-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Homepage-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LoginPage-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\LoginPage-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="round_password_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\round_password_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sharp_category_white_48 - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\sharp_category_white_48 - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="round_power_settings_new_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\round_power_settings_new_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sharp_shopping_cart_grey_48_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\sharp_shopping_cart_grey_48_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sharp_person_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\sharp_person_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="baseline_search_black_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\baseline_search_black_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="round_account_circle_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\round_account_circle_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="round_clear_white_481" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\round_clear_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sharp_person_white_48 - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\sharp_person_white_48 - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sharp_history_white_48 - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\sharp_history_white_48 - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo-01-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Logo-01-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Logo - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sharp_category_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\sharp_category_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sharp_inventory_2_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\sharp_inventory_2_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outline_payments_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\outline_payments_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SICAP icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\SICAP icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="baseline_add_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\baseline_add_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="round_face_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\round_face_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sharp_history_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\sharp_history_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Homepage-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Homepage-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sharp_shopping_cart_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\sharp_shopping_cart_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sharp_history_white_48 - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\sharp_history_white_48 - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sharp_inventory_2_white_48 - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\sharp_inventory_2_white_48 - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AboutSICAP-02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\AboutSICAP-02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="round_password_white_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\round_password_white_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SICAP icon - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\SICAP icon - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

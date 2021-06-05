@@ -63,6 +63,16 @@ namespace SICAP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AboutSICAP_02 {
+            get {
+                object obj = ResourceManager.GetObject("AboutSICAP-02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap baseline_add_white_48 {
             get {
                 object obj = ResourceManager.GetObject("baseline_add_white_48", resourceCulture);
@@ -326,6 +336,16 @@ namespace SICAP.Properties {
         internal static System.Drawing.Bitmap SICAP_icon {
             get {
                 object obj = ResourceManager.GetObject("SICAP icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SICAP_icon___Copy {
+            get {
+                object obj = ResourceManager.GetObject("SICAP icon - Copy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

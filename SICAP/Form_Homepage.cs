@@ -144,6 +144,11 @@ namespace SICAP
             OpenChildForm(new Form_History(), btnHistory);
         }
 
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Form_About(), btnAbout);
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Close();
