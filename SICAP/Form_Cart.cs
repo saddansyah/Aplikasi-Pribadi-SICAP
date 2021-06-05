@@ -112,7 +112,10 @@ namespace SICAP
                 int qty = Convert.ToInt32(dgvCart.Rows[e.RowIndex].Cells[3].Value.ToString());
 
                 if (qty > 1)
+                {
                     dgvCart.Rows[e.RowIndex].Cells[3].Value = --qty;
+                    new_order.UpdateCart(dgvCart);
+                }                
                 else
                     new_order.DeleteFromCart(dgvCart);
 

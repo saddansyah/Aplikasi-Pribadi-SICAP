@@ -21,10 +21,34 @@ namespace SICAP
             InitializeComponent();
         }
 
-        public void DisplayCountTransaction()
+        private void DeleteHistory(int id)
         {
-            string query = "SELECT COUNT(TotalTransaksi) FROM TBL_Transaksi WHERE TanggalTransaksi = '" + DateTime.Today.Day.ToString() + "-" + DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'";
+            string query = "DELETE FROM TBL_Transaksi WHERE IDTransaksi = @ID";
 
+            SqlConnection conn = Connection.GetConn();
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.CommandType = CommandType.Text;
+
+            cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Deleted successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+            conn.Close();
+        }
+
+        public void DisplayCountTransaction(string query)
+        { 
             SqlConnection conn = Connection.GetConn();
             conn.Open();
 
@@ -44,9 +68,8 @@ namespace SICAP
             conn.Close();
         }
 
-        public void DisplaySumTransaction()
+        public void DisplaySumTransaction(string query)
         {
-            string query = "SELECT SUM(TotalTransaksi) FROM TBL_Transaksi WHERE TanggalTransaksi = '" + DateTime.Today.Day.ToString() + "-" + DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'";
 
             SqlConnection conn = Connection.GetConn();
             conn.Open();
@@ -57,12 +80,36 @@ namespace SICAP
 
             if (rd.Read())
             {
-                string sum = int.Parse(rd[0].ToString()).ToString("C", culture);
+                string sum = rd[0].ToString();
 
                 if (sum.ToString() == "")
                     lblIncome.Text = "0";
                 else
-                    lblIncome.Text = sum;
+                    lblIncome.Text = int.Parse(sum).ToString("C", culture);
+
+                rd.Close();
+            }
+            conn.Close();
+        }
+
+        public void DisplayProfit(string query)
+        {
+
+            SqlConnection conn = Connection.GetConn();
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
+            SqlDataReader rd = cmd.ExecuteReader();
+
+            if (rd.Read())
+            {
+                string sum = rd[0].ToString();
+
+                if (sum.ToString() == "")
+                    lblProfit.Text = "0";
+                else
+                    lblProfit.Text = int.Parse(sum).ToString("C", culture);
 
                 rd.Close();
             }
@@ -71,14 +118,22 @@ namespace SICAP
 
         public void Display()
         {
-            GetData.ShowData("SELECT IDTransaksi, NamaKasir, TanggalTransaksi, TotalTransaksi FROM TBL_Transaksi", dgvHistory);
+            GetData.ShowData("SELECT IDTransaksi, NamaKasir, TanggalTransaksi, TotalTransaksi, TotalUntung FROM TBL_Transaksi", dgvHistory);
+        }
+
+        public void DisplayAll()
+        {
+            Display();
+            DisplayCountTransaction("SELECT COUNT(TotalTransaksi) FROM TBL_Transaksi WHERE TanggalTransaksi = '" + DateTime.Now.ToString("dd") + "-" + DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'");
+            DisplaySumTransaction("SELECT SUM(TotalTransaksi) FROM TBL_Transaksi WHERE TanggalTransaksi = '" + DateTime.Now.ToString("dd") + "-" + DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'");
+            DisplayProfit("SELECT SUM(TotalUntung) FROM TBL_Transaksi WHERE TanggalTransaksi = '" + DateTime.Now.ToString("dd") + "-" + DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'");
+            cbMonth.Text = "All";
+            cbTransaction.Text = "This Day";
         }
 
         private void Form_History_Load(object sender, EventArgs e)
         {
-            Display();
-            DisplayCountTransaction();
-            DisplaySumTransaction();
+            DisplayAll();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -96,8 +151,73 @@ namespace SICAP
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close();
-                    Display();
+                    DisplayAll();
                 }
+            }
+        }
+
+        private void dgvHistory_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                if (MessageBox.Show("Are you sure to delete this?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    DeleteHistory(Convert.ToInt32(dgvHistory.Rows[e.ColumnIndex].Cells[1].Value.ToString()));
+                    DisplayAll();
+                }
+            }
+        }
+
+        private void cbMonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbMonth.Text == "All")
+            {
+                Display();
+            }
+            else
+            {
+                GetData.ShowData("SELECT IDTransaksi, NamaKasir, TanggalTransaksi, TotalTransaksi, TotalUntung FROM TBL_Transaksi WHERE TanggalTransaksi LIKE '%" + cbMonth.Text + "%'", dgvHistory);
+            }
+                
+        }
+
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (cbMonth.Text == "All")
+            {
+                GetData.ShowData("SELECT IDTransaksi, NamaKasir, TanggalTransaksi, TotalTransaksi FROM TBL_Transaksi WHERE TanggalTransaksi LIKE '%" + tbSearch.Text + "%'", dgvHistory);
+            }
+            else
+            {
+                GetData.ShowData("SELECT IDTransaksi, NamaKasir, TanggalTransaksi, TotalTransaksi FROM TBL_Transaksi WHERE TanggalTransaksi LIKE '%" + tbSearch.Text + "%' AND TanggalTransaksi LIKE '%" + cbMonth.Text + "%'", dgvHistory);
+            }
+        }
+
+        private void cbTransaction_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbTransaction.Text == "This Day")
+            {
+                DisplayCountTransaction("SELECT COUNT(TotalTransaksi) FROM TBL_Transaksi WHERE TanggalTransaksi = '" + DateTime.Now.ToString("dd") + "-" + DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'");
+                DisplaySumTransaction("SELECT SUM(TotalTransaksi) FROM TBL_Transaksi WHERE TanggalTransaksi = '" + DateTime.Now.ToString("dd") + "-" + DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'");
+                DisplayProfit("SELECT SUM(TotalUntung) FROM TBL_Transaksi WHERE TanggalTransaksi = '" + DateTime.Now.ToString("dd") + "-" + DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'");
+            }
+            else if (cbTransaction.Text == "This Month")
+            {
+                DisplayCountTransaction("SELECT COUNT(TotalTransaksi) FROM TBL_Transaksi WHERE TanggalTransaksi LIKE '%"+ DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'");
+                DisplaySumTransaction("SELECT SUM(TotalTransaksi) FROM TBL_Transaksi WHERE TanggalTransaksi LIKE '%" + DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'");
+                DisplayProfit("SELECT SUM(TotalUntung) FROM TBL_Transaksi WHERE TanggalTransaksi LIKE '%" + DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'");
+            }
+            else if (cbTransaction.Text == "This Year")
+            {
+                DisplayCountTransaction("SELECT COUNT(TotalTransaksi) FROM TBL_Transaksi WHERE TanggalTransaksi LIKE '%" + DateTime.Today.Year.ToString() + "'");
+                DisplaySumTransaction("SELECT SUM(TotalTransaksi) FROM TBL_Transaksi WHERE TanggalTransaksi LIKE '%" + DateTime.Today.Year.ToString() + "'");
+                DisplayProfit("SELECT SUM(TotalUntung) FROM TBL_Transaksi WHERE TanggalTransaksi LIKE '%" + DateTime.Today.Year.ToString() + "'");
+            }
+            else if (cbTransaction.Text == "All")
+            {
+                DisplayCountTransaction("SELECT COUNT(TotalTransaksi) FROM TBL_Transaksi ");
+                DisplaySumTransaction("SELECT SUM(TotalTransaksi) FROM TBL_Transaksi");
+                DisplayProfit("SELECT SUM(TotalUntung) FROM TBL_Transaksi");
             }
         }
     }
