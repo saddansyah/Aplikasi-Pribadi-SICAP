@@ -135,7 +135,12 @@ namespace SICAP
         private void btnClear_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you want to delete this ?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes && new_order != null)
+            {
                 new_order.ClearCart(dgvCart);
+                lblTotal.Text = "0";
+                tbPayment.Text = "0";
+            }
+
         }
 
         private void tbPayment_TextChanged(object sender, EventArgs e)
@@ -180,7 +185,7 @@ namespace SICAP
             }                    
         }
 
-        private void btnPayment_Click(object sender, EventArgs e)
+        private void lblTotal_Click(object sender, EventArgs e)
         {
             if (lblTotal.Text == "0")
                 tbPayment.Text = "0";

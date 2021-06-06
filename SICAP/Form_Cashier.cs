@@ -42,7 +42,6 @@ namespace SICAP
             if (tbUsername.Text == "" || tbCashierName.Text == "" || tbCashierPassword.Text == "" || cbCashierLevel.Text == "")
             {
                 MessageBox.Show("Fill out the blank textbox!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Clear();
             }
             else if(btnAdd.Text == "Add")
             {
@@ -54,7 +53,7 @@ namespace SICAP
             else if(btnAdd.Text == "Update")
             {
                 new_cashier = new Cashier(tbUsername.Text.Trim(), tbCashierName.Text.Trim(), tbCashierPassword.Text.Trim(), cbCashierLevel.Text.Trim());
-                Cashier.UpdateCashier(new_cashier, tbUsername.Text.Trim());
+                Cashier.UpdateCashier(new_cashier, tbUsername.Text);
                 Clear();
                 Display();
                 btnAddItem_Click(sender, e);
@@ -65,6 +64,7 @@ namespace SICAP
             btnAdd.Text = "Add";
             this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(146)))), ((int)(((byte)(84)))));
             Clear();
+            tbUsername.Enabled = true;
             tbUsername.Focus();
 
         }
@@ -90,7 +90,8 @@ namespace SICAP
                 tbCashierPassword.Text = dgvCashier.Rows[e.RowIndex].Cells[4].Value.ToString();
                 cbCashierLevel.Text = dgvCashier.Rows[e.RowIndex].Cells[5].Value.ToString();
 
-                tbUsername.Focus();
+                tbUsername.Enabled = false;
+                tbCashierName.Focus();
             }
             else if (e.ColumnIndex == 1)
             {

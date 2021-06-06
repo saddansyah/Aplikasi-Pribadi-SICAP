@@ -66,9 +66,9 @@ namespace SICAP
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.pnlPayment = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.tbPayment = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnPayment = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnBuy = new Guna.UI2.WinForms.Guna2Button();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.pnlSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
@@ -435,6 +435,7 @@ namespace SICAP
             this.lblTotal.Size = new System.Drawing.Size(450, 35);
             this.lblTotal.TabIndex = 26;
             this.lblTotal.Text = "0";
+            this.lblTotal.Click += new System.EventHandler(this.lblTotal_Click);
             // 
             // btnClear
             // 
@@ -462,8 +463,8 @@ namespace SICAP
             // 
             this.pnlPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlPayment.BackColor = System.Drawing.Color.Transparent;
+            this.pnlPayment.Controls.Add(this.label4);
             this.pnlPayment.Controls.Add(this.tbPayment);
-            this.pnlPayment.Controls.Add(this.btnPayment);
             this.pnlPayment.Controls.Add(this.lblReturn);
             this.pnlPayment.Controls.Add(this.btnBuy);
             this.pnlPayment.Controls.Add(this.label3);
@@ -508,26 +509,6 @@ namespace SICAP
             this.tbPayment.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbPayment.TextChanged += new System.EventHandler(this.tbPayment_TextChanged);
             // 
-            // btnPayment
-            // 
-            this.btnPayment.Animated = true;
-            this.btnPayment.AutoRoundedCorners = true;
-            this.btnPayment.BorderRadius = 21;
-            this.btnPayment.CheckedState.Parent = this.btnPayment;
-            this.btnPayment.CustomImages.Parent = this.btnPayment;
-            this.btnPayment.FillColor = System.Drawing.Color.White;
-            this.btnPayment.FillColor2 = System.Drawing.Color.White;
-            this.btnPayment.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnPayment.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnPayment.HoverState.Parent = this.btnPayment;
-            this.btnPayment.Location = new System.Drawing.Point(24, 28);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.ShadowDecoration.Parent = this.btnPayment;
-            this.btnPayment.Size = new System.Drawing.Size(109, 45);
-            this.btnPayment.TabIndex = 15;
-            this.btnPayment.Text = "Payment :";
-            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
-            // 
             // btnBuy
             // 
             this.btnBuy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -554,6 +535,17 @@ namespace SICAP
             // orderBindingSource
             // 
             this.orderBindingSource.DataSource = typeof(SICAP.Order);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label4.Location = new System.Drawing.Point(73, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 21);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Cash :";
             // 
             // Form_Cart
             // 
@@ -600,7 +592,6 @@ namespace SICAP
         private Guna.UI2.WinForms.Guna2TextBox tbSearch;
         private Guna.UI2.WinForms.Guna2Button btnClear;
         private Guna.UI2.WinForms.Guna2TextBox tbPayment;
-        private Guna.UI2.WinForms.Guna2GradientButton btnPayment;
         private Guna.UI2.WinForms.Guna2GradientButton lblTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -610,5 +601,6 @@ namespace SICAP
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
         private System.Windows.Forms.BindingSource orderBindingSource;
+        private System.Windows.Forms.Label label4;
     }
 }

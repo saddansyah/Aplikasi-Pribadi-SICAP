@@ -41,7 +41,7 @@ namespace SICAP
 
             if (rd.Read() == true && cashier.Username == rd[0].ToString())
             {
-                MessageBox.Show("Username '" + cashier.Username + "' already taken");
+                MessageBox.Show("Username '" + cashier.Username + "' already taken!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 rd.Close();
             }
             else
@@ -72,7 +72,7 @@ namespace SICAP
 
         public static void UpdateCashier(Cashier cashier, string username)
         {
-            string query = "UPDATE TBL_Kasir SET Username = @Username, NamaKasir = @CashierName, PasswordKasir = @CashierPass, LevelKasir = @CashierLevel WHERE Username = @Username";
+            string query = "UPDATE TBL_Kasir SET NamaKasir = @CashierName, PasswordKasir = @CashierPass, LevelKasir = @CashierLevel WHERE Username = @Username";
            
             SqlConnection conn = Connection.GetConn();
             conn.Open();
