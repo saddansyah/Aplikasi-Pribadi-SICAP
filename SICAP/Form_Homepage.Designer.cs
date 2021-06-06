@@ -41,17 +41,18 @@ namespace SICAP
             this.btnCashier = new Guna.UI2.WinForms.Guna2Button();
             this.btnManagement = new Guna.UI2.WinForms.Guna2Button();
             this.pnlAccount = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.lblCashierLevel = new System.Windows.Forms.Label();
             this.lblCashierName = new System.Windows.Forms.Label();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.pbHomepage = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.pnlSubManagement.SuspendLayout();
             this.pnlAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.pnlChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHomepage)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -108,7 +109,7 @@ namespace SICAP
             this.btnAbout.HoverState.Parent = this.btnAbout;
             this.btnAbout.Image = global::SICAP.Properties.Resources.SICAP_icon;
             this.btnAbout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAbout.Location = new System.Drawing.Point(0, 429);
+            this.btnAbout.Location = new System.Drawing.Point(0, 491);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.ShadowDecoration.Parent = this.btnAbout;
             this.btnAbout.Size = new System.Drawing.Size(279, 45);
@@ -132,7 +133,7 @@ namespace SICAP
             this.btnHistory.HoverState.Parent = this.btnHistory;
             this.btnHistory.Image = global::SICAP.Properties.Resources.sharp_history_white_48;
             this.btnHistory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHistory.Location = new System.Drawing.Point(0, 384);
+            this.btnHistory.Location = new System.Drawing.Point(0, 446);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.ShadowDecoration.Parent = this.btnHistory;
             this.btnHistory.Size = new System.Drawing.Size(279, 45);
@@ -156,7 +157,7 @@ namespace SICAP
             this.btnCart.HoverState.Parent = this.btnCart;
             this.btnCart.Image = global::SICAP.Properties.Resources.sharp_shopping_cart_grey_48_2;
             this.btnCart.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCart.Location = new System.Drawing.Point(0, 339);
+            this.btnCart.Location = new System.Drawing.Point(0, 401);
             this.btnCart.Name = "btnCart";
             this.btnCart.ShadowDecoration.Parent = this.btnCart;
             this.btnCart.Size = new System.Drawing.Size(279, 45);
@@ -171,7 +172,7 @@ namespace SICAP
             this.pnlSubManagement.Controls.Add(this.btnInventory);
             this.pnlSubManagement.Controls.Add(this.btnCashier);
             this.pnlSubManagement.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubManagement.Location = new System.Drawing.Point(0, 206);
+            this.pnlSubManagement.Location = new System.Drawing.Point(0, 268);
             this.pnlSubManagement.Name = "pnlSubManagement";
             this.pnlSubManagement.Size = new System.Drawing.Size(279, 133);
             this.pnlSubManagement.TabIndex = 1;
@@ -268,7 +269,7 @@ namespace SICAP
             this.btnManagement.HoverState.Parent = this.btnManagement;
             this.btnManagement.Image = global::SICAP.Properties.Resources.round_storage_black_48;
             this.btnManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnManagement.Location = new System.Drawing.Point(0, 161);
+            this.btnManagement.Location = new System.Drawing.Point(0, 223);
             this.btnManagement.Name = "btnManagement";
             this.btnManagement.ShadowDecoration.Parent = this.btnManagement;
             this.btnManagement.Size = new System.Drawing.Size(279, 45);
@@ -279,37 +280,24 @@ namespace SICAP
             // 
             // pnlAccount
             // 
-            this.pnlAccount.Controls.Add(this.lblCashierLevel);
-            this.pnlAccount.Controls.Add(this.lblCashierName);
+            this.pnlAccount.Controls.Add(this.panel1);
             this.pnlAccount.Controls.Add(this.pbLogo);
             this.pnlAccount.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAccount.Location = new System.Drawing.Point(0, 0);
             this.pnlAccount.Name = "pnlAccount";
             this.pnlAccount.ShadowDecoration.Parent = this.pnlAccount;
-            this.pnlAccount.Size = new System.Drawing.Size(279, 161);
+            this.pnlAccount.Size = new System.Drawing.Size(279, 223);
             this.pnlAccount.TabIndex = 0;
-            // 
-            // lblCashierLevel
-            // 
-            this.lblCashierLevel.AutoSize = true;
-            this.lblCashierLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCashierLevel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCashierLevel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCashierLevel.Location = new System.Drawing.Point(74, 80);
-            this.lblCashierLevel.Name = "lblCashierLevel";
-            this.lblCashierLevel.Size = new System.Drawing.Size(95, 22);
-            this.lblCashierLevel.TabIndex = 2;
-            this.lblCashierLevel.Text = "as Admin";
             // 
             // lblCashierName
             // 
-            this.lblCashierName.AutoSize = true;
             this.lblCashierName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblCashierName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCashierName.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCashierName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCashierName.Location = new System.Drawing.Point(74, 54);
+            this.lblCashierName.Location = new System.Drawing.Point(0, 0);
             this.lblCashierName.Name = "lblCashierName";
-            this.lblCashierName.Size = new System.Drawing.Size(160, 23);
+            this.lblCashierName.Size = new System.Drawing.Size(191, 104);
             this.lblCashierName.TabIndex = 1;
             this.lblCashierName.Text = "Hello, Username";
             // 
@@ -317,7 +305,7 @@ namespace SICAP
             // 
             this.pbLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pbLogo.Image = global::SICAP.Properties.Resources.Logo___Copy;
-            this.pbLogo.Location = new System.Drawing.Point(30, 41);
+            this.pbLogo.Location = new System.Drawing.Point(37, 32);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(32, 75);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -345,6 +333,14 @@ namespace SICAP
             this.pbHomepage.TabIndex = 0;
             this.pbHomepage.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblCashierName);
+            this.panel1.Location = new System.Drawing.Point(33, 113);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(191, 104);
+            this.panel1.TabIndex = 2;
+            // 
             // Form_Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -362,10 +358,10 @@ namespace SICAP
             this.pnlMenu.ResumeLayout(false);
             this.pnlSubManagement.ResumeLayout(false);
             this.pnlAccount.ResumeLayout(false);
-            this.pnlAccount.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.pnlChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbHomepage)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -382,11 +378,11 @@ namespace SICAP
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private System.Windows.Forms.Label lblCashierName;
         private System.Windows.Forms.PictureBox pbLogo;
-        private System.Windows.Forms.Label lblCashierLevel;
         private Guna.UI2.WinForms.Guna2GradientPanel pnlAccount;
         private System.Windows.Forms.PictureBox pbHomepage;
         public Guna.UI2.WinForms.Guna2Button btnCashier;
         public Guna.UI2.WinForms.Guna2Button btnCategory;
         public Guna.UI2.WinForms.Guna2Button btnInventory;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -29,6 +29,7 @@ namespace SICAP
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -67,11 +68,13 @@ namespace SICAP
             this.tbPayment = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnPayment = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnBuy = new Guna.UI2.WinForms.Guna2Button();
+            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
             this.pnlCRUD.SuspendLayout();
             this.pnlPayment.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSearch
@@ -384,9 +387,9 @@ namespace SICAP
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label3.Location = new System.Drawing.Point(52, 93);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 21);
+            this.label3.Size = new System.Drawing.Size(73, 21);
             this.label3.TabIndex = 19;
-            this.label3.Text = "Return :";
+            this.label3.Text = "Change :";
             // 
             // lblReturn
             // 
@@ -492,7 +495,7 @@ namespace SICAP
             this.tbPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(239)))));
             this.tbPayment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPayment.HoverState.Parent = this.tbPayment;
-            this.tbPayment.Location = new System.Drawing.Point(129, 28);
+            this.tbPayment.Location = new System.Drawing.Point(140, 28);
             this.tbPayment.Margin = new System.Windows.Forms.Padding(4);
             this.tbPayment.Name = "tbPayment";
             this.tbPayment.PasswordChar = '\0';
@@ -500,7 +503,7 @@ namespace SICAP
             this.tbPayment.PlaceholderText = "Enter your money amount here";
             this.tbPayment.SelectedText = "";
             this.tbPayment.ShadowDecoration.Parent = this.tbPayment;
-            this.tbPayment.Size = new System.Drawing.Size(432, 45);
+            this.tbPayment.Size = new System.Drawing.Size(421, 45);
             this.tbPayment.TabIndex = 16;
             this.tbPayment.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbPayment.TextChanged += new System.EventHandler(this.tbPayment_TextChanged);
@@ -548,6 +551,10 @@ namespace SICAP
             this.btnBuy.TextOffset = new System.Drawing.Point(2, 0);
             this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
+            // orderBindingSource
+            // 
+            this.orderBindingSource.DataSource = typeof(SICAP.Order);
+            // 
             // Form_Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -568,6 +575,7 @@ namespace SICAP
             this.pnlCRUD.PerformLayout();
             this.pnlPayment.ResumeLayout(false);
             this.pnlPayment.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -601,5 +609,6 @@ namespace SICAP
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
+        private System.Windows.Forms.BindingSource orderBindingSource;
     }
 }

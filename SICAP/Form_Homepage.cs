@@ -37,8 +37,7 @@ namespace SICAP
             if (rd.Read())
             {
                 sellerName = rd[0].ToString();
-                lblCashierName.Text = "Hello, " + sellerName;
-                lblCashierLevel.Text = "as " + rd[1].ToString();
+                lblCashierName.Text = "Hello, " + sellerName + "\nas " + rd[1].ToString();
 
                 if (rd[1].ToString() == "Admin")
                 {

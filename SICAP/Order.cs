@@ -146,14 +146,19 @@ namespace SICAP
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.CommandType = CommandType.Text;
 
-            cmd.Parameters.Add("@SellerName", SqlDbType.VarChar).Value = this.Seller;
-            cmd.Parameters.Add("@Date", SqlDbType.VarChar).Value = this.Date;
-            cmd.Parameters.Add("@Total", SqlDbType.Int).Value = this.Total;
-            cmd.Parameters.Add("@Profit", SqlDbType.Int).Value = this.Profit;
+            try
+            {
+                cmd.Parameters.Add("@SellerName", SqlDbType.VarChar).Value = this.Seller;
+                cmd.Parameters.Add("@Date", SqlDbType.VarChar).Value = this.Date;
+                cmd.Parameters.Add("@Total", SqlDbType.Int).Value = this.Total;
+                cmd.Parameters.Add("@Profit", SqlDbType.Int).Value = this.Profit;
 
-            cmd.ExecuteNonQuery();
-
-            MessageBox.Show("Transaction is succesful!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
             conn.Close();
         }

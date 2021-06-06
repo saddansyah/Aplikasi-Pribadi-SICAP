@@ -173,6 +173,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Order.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -268,6 +269,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database_UNTUNK.mdf</DependentUpon>
     </Content>
+    <None Include="img\Successful_1.gif" />
     <None Include="img\SICAP icon - Copy.png" />
     <None Include="img\AboutSICAP-02.png" />
     <None Include="img\sharp_history_white_48 - Copy.png" />

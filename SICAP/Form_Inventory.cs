@@ -13,6 +13,7 @@ namespace SICAP
 {
     public partial class Form_Inventory : Form
     {
+        private int selectedID;
         public Form_Inventory()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace SICAP
 
         public void Display()
         {
-            GetData.ShowData("SELECT TBL_Barang.IDBarang, TBL_Barang.NamaBarang, TBL_Barang.HargaBeli, TBL_Barang.HargaJual, TBL_Barang.IDKategori, TBL_Kategori.NamaKategori FROM TBL_Barang INNER JOIN TBL_Kategori ON TBL_Barang.IDKategori = TBL_Kategori.IDKategori", dgvInventory);
+            GetData.ShowData("SELECT TBL_Barang.IDBarang, TBL_Barang.NamaBarang, TBL_Barang.HargaBeli, TBL_Barang.HargaJual, TBL_Kategori.NamaKategori FROM TBL_Barang INNER JOIN TBL_Kategori ON TBL_Barang.IDKategori = TBL_Kategori.IDKategori", dgvInventory);
         }
 
         public void FillCBItemCtg()
@@ -38,7 +39,7 @@ namespace SICAP
 
             while (rd.Read())
             {
-                string items = rd["IDKategori"].ToString();
+                string items = rd["NamaKategori"].ToString();
                 cbItemCategory.Items.Add(items);
             }
 
@@ -82,11 +83,11 @@ namespace SICAP
         {
             if (cbSearchCategory.Text == "All")
             {
-                GetData.ShowData("SELECT TBL_Barang.IDBarang, TBL_Barang.NamaBarang, TBL_Barang.HargaBeli, TBL_Barang.HargaJual, TBL_Barang.IDKategori, TBL_Kategori.NamaKategori FROM TBL_Barang INNER JOIN TBL_Kategori ON TBL_Barang.IDKategori = TBL_Kategori.IDKategori WHERE TBL_Barang.NamaBarang LIKE '%" + tbSearch.Text + "%'", dgvInventory);
+                GetData.ShowData("SELECT TBL_Barang.IDBarang, TBL_Barang.NamaBarang, TBL_Barang.HargaBeli, TBL_Barang.HargaJual, TBL_Kategori.NamaKategori FROM TBL_Barang INNER JOIN TBL_Kategori ON TBL_Barang.IDKategori = TBL_Kategori.IDKategori WHERE TBL_Barang.NamaBarang LIKE '%" + tbSearch.Text + "%'", dgvInventory);
             }
             else
             {
-                GetData.ShowData("SELECT TBL_Barang.IDBarang, TBL_Barang.NamaBarang, TBL_Barang.HargaBeli, TBL_Barang.HargaJual, TBL_Barang.IDKategori, TBL_Kategori.NamaKategori FROM TBL_Barang INNER JOIN TBL_Kategori ON TBL_Barang.IDKategori = TBL_Kategori.IDKategori WHERE TBL_Barang.NamaBarang LIKE '%" + tbSearch.Text + "%' AND TBL_Kategori.NamaKategori ='" + cbSearchCategory.Text +"'", dgvInventory);
+                GetData.ShowData("SELECT TBL_Barang.IDBarang, TBL_Barang.NamaBarang, TBL_Barang.HargaBeli, TBL_Barang.HargaJual, TBL_Kategori.NamaKategori FROM TBL_Barang INNER JOIN TBL_Kategori ON TBL_Barang.IDKategori = TBL_Kategori.IDKategori WHERE TBL_Barang.NamaBarang LIKE '%" + tbSearch.Text + "%' AND TBL_Kategori.NamaKategori ='" + cbSearchCategory.Text +"'", dgvInventory);
             }
         }
 
@@ -102,7 +103,7 @@ namespace SICAP
             {
                 try
                 {
-                    inventory = new Inventory(Convert.ToInt32(tbItemID.Text.Trim()), tbItemName.Text.Trim(), Convert.ToInt32(tbItemMPrice.Text.Trim()), Convert.ToInt32(tbItemSPrice.Text.Trim()), Convert.ToInt32(cbItemCategory.Text.Trim()));
+                    inventory = new Inventory(Convert.ToInt32(tbItemID.Text.Trim()), tbItemName.Text.Trim(), Convert.ToInt32(tbItemMPrice.Text.Trim()), Convert.ToInt32(tbItemSPrice.Text.Trim()), selectedID);
                     Inventory.AddItem(inventory);
                     Clear();
                     Display();
@@ -117,7 +118,7 @@ namespace SICAP
             {
                 try
                 {
-                    inventory = new Inventory(Convert.ToInt32(tbItemID.Text.Trim()), tbItemName.Text.Trim(), Convert.ToInt32(tbItemMPrice.Text.Trim()), Convert.ToInt32(tbItemSPrice.Text.Trim()), Convert.ToInt32(cbItemCategory.Text.Trim()));
+                    inventory = new Inventory(Convert.ToInt32(tbItemID.Text.Trim()), tbItemName.Text.Trim(), Convert.ToInt32(tbItemMPrice.Text.Trim()), Convert.ToInt32(tbItemSPrice.Text.Trim()), selectedID);
                     Inventory.UpdateItem(inventory, Convert.ToInt32(tbItemID.Text));
                     Clear();
                     Display();
@@ -175,14 +176,15 @@ namespace SICAP
         private void cbItemCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlConnection conn = Connection.GetConn();
-            SqlCommand cmd = new SqlCommand("SELECT NamaKategori, DeskripsiKategori FROM TBL_Kategori WHERE IDKategori = " + cbItemCategory.Text + "", conn);
+            SqlCommand cmd = new SqlCommand("SELECT IDKategori, DeskripsiKategori FROM TBL_Kategori WHERE NamaKategori ='" + cbItemCategory.Text + "'", conn);
             conn.Open();
             cmd.ExecuteNonQuery();
             SqlDataReader rd = cmd.ExecuteReader();
 
             if (rd.Read())
             {
-                lblCategoryName.Text = "Category :  " + rd[0].ToString() + "\n\n" + rd[1].ToString();
+                this.selectedID = Convert.ToInt32(rd[0].ToString());
+                lblCategoryName.Text = rd[1].ToString();
             }
             else
             {
@@ -194,9 +196,9 @@ namespace SICAP
         private void cbSearchCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(cbSearchCategory.Text == "All")
-                GetData.ShowData("SELECT TBL_Barang.IDBarang, TBL_Barang.NamaBarang, TBL_Barang.HargaBeli, TBL_Barang.HargaJual, TBL_Barang.IDKategori, TBL_Kategori.NamaKategori FROM TBL_Barang INNER JOIN TBL_Kategori ON TBL_Barang.IDKategori = TBL_Kategori.IDKategori", dgvInventory);
+                GetData.ShowData("SELECT TBL_Barang.IDBarang, TBL_Barang.NamaBarang, TBL_Barang.HargaBeli, TBL_Barang.HargaJual, TBL_Kategori.NamaKategori FROM TBL_Barang INNER JOIN TBL_Kategori ON TBL_Barang.IDKategori = TBL_Kategori.IDKategori", dgvInventory);
             else
-                GetData.ShowData("SELECT TBL_Barang.IDBarang, TBL_Barang.NamaBarang, TBL_Barang.HargaBeli, TBL_Barang.HargaJual, TBL_Barang.IDKategori, TBL_Kategori.NamaKategori FROM TBL_Barang INNER JOIN TBL_Kategori ON TBL_Barang.IDKategori = TBL_Kategori.IDKategori WHERE TBL_Kategori.NamaKategori = '" + cbSearchCategory.Text +"'", dgvInventory);
+                GetData.ShowData("SELECT TBL_Barang.IDBarang, TBL_Barang.NamaBarang, TBL_Barang.HargaBeli, TBL_Barang.HargaJual, TBL_Kategori.NamaKategori FROM TBL_Barang INNER JOIN TBL_Kategori ON TBL_Barang.IDKategori = TBL_Kategori.IDKategori WHERE TBL_Kategori.NamaKategori = '" + cbSearchCategory.Text +"'", dgvInventory);
         }
 
         private void lblCategoryName_Click(object sender, EventArgs e)

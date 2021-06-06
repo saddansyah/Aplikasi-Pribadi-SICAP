@@ -42,9 +42,9 @@ namespace SICAP
             this.tbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvHistory = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbTransaction = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlReport = new System.Windows.Forms.Panel();
-            this.cbTransaction = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblAboveProfit = new System.Windows.Forms.Label();
             this.lblProfit = new System.Windows.Forms.Label();
             this.lblAboveIncome = new System.Windows.Forms.Label();
@@ -203,36 +203,6 @@ namespace SICAP
             this.panel1.Size = new System.Drawing.Size(528, 716);
             this.panel1.TabIndex = 13;
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(239)))));
-            this.label2.Location = new System.Drawing.Point(25, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(226, 32);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Your Achievement :";
-            // 
-            // pnlReport
-            // 
-            this.pnlReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(239)))));
-            this.pnlReport.Controls.Add(this.lblAboveProfit);
-            this.pnlReport.Controls.Add(this.lblProfit);
-            this.pnlReport.Controls.Add(this.lblAboveIncome);
-            this.pnlReport.Controls.Add(this.lblIncome);
-            this.pnlReport.Controls.Add(this.lblBelowCount);
-            this.pnlReport.Controls.Add(this.lblTransactionCount);
-            this.pnlReport.Controls.Add(this.guna2PictureBox1);
-            this.pnlReport.Location = new System.Drawing.Point(31, 78);
-            this.pnlReport.Name = "pnlReport";
-            this.pnlReport.Size = new System.Drawing.Size(463, 607);
-            this.pnlReport.TabIndex = 0;
-            // 
             // cbTransaction
             // 
             this.cbTransaction.Animated = true;
@@ -263,6 +233,36 @@ namespace SICAP
             this.cbTransaction.Size = new System.Drawing.Size(140, 36);
             this.cbTransaction.TabIndex = 18;
             this.cbTransaction.SelectedIndexChanged += new System.EventHandler(this.cbTransaction_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(239)))));
+            this.label2.Location = new System.Drawing.Point(25, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(226, 32);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Your Achievement :";
+            // 
+            // pnlReport
+            // 
+            this.pnlReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(239)))));
+            this.pnlReport.Controls.Add(this.lblAboveProfit);
+            this.pnlReport.Controls.Add(this.lblProfit);
+            this.pnlReport.Controls.Add(this.lblAboveIncome);
+            this.pnlReport.Controls.Add(this.lblIncome);
+            this.pnlReport.Controls.Add(this.lblBelowCount);
+            this.pnlReport.Controls.Add(this.lblTransactionCount);
+            this.pnlReport.Controls.Add(this.guna2PictureBox1);
+            this.pnlReport.Location = new System.Drawing.Point(31, 78);
+            this.pnlReport.Name = "pnlReport";
+            this.pnlReport.Size = new System.Drawing.Size(463, 607);
+            this.pnlReport.TabIndex = 0;
             // 
             // lblAboveProfit
             // 
@@ -388,7 +388,7 @@ namespace SICAP
             this.Column1.DataPropertyName = "IDTransaksi";
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column1.FillWeight = 32.76981F;
+            this.Column1.FillWeight = 36.35976F;
             this.Column1.HeaderText = "ID";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -398,7 +398,7 @@ namespace SICAP
             this.Column2.DataPropertyName = "NamaKasir";
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column2.FillWeight = 227.1179F;
+            this.Column2.FillWeight = 250.571F;
             this.Column2.HeaderText = "Cashier Name";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -408,7 +408,7 @@ namespace SICAP
             this.Column4.DataPropertyName = "TanggalTransaksi";
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column4.FillWeight = 124.5338F;
+            this.Column4.FillWeight = 137.3936F;
             this.Column4.HeaderText = "Date";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -418,6 +418,7 @@ namespace SICAP
             this.Column8.DataPropertyName = "TotalTransaksi";
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
             this.Column8.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column8.FillWeight = 110.3264F;
             this.Column8.HeaderText = "Amount";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
@@ -427,6 +428,7 @@ namespace SICAP
             this.Column3.DataPropertyName = "TotalUntung";
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
             this.Column3.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column3.FillWeight = 110.3264F;
             this.Column3.HeaderText = "Profit";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
@@ -439,7 +441,7 @@ namespace SICAP
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(146)))), ((int)(((byte)(84)))));
             this.Column5.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Column5.FillWeight = 64.6355F;
+            this.Column5.FillWeight = 71.31001F;
             this.Column5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Column5.HeaderText = "";
             this.Column5.Name = "Column5";

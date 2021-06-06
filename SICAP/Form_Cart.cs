@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace SICAP
 {
     public partial class Form_Cart : Form
     {
+        CultureInfo culture = new CultureInfo("id-ID");
         Order new_order;
         private string sellerName;
 
@@ -96,7 +98,7 @@ namespace SICAP
 
                     new_order.AddToCart(new_order, dgvCart);
 
-                    lblTotal.Text = new_order.Total.ToString();
+                    lblTotal.Text = new_order.Total.ToString("C", culture);
                 }
                 catch(Exception ex)
                 {
@@ -119,14 +121,14 @@ namespace SICAP
                 else
                     new_order.DeleteFromCart(dgvCart);
 
-                lblTotal.Text = new_order.Total.ToString();
+                lblTotal.Text = new_order.Total.ToString("C", culture);
             }
             else if(e.ColumnIndex == 6)
             {
                 if (MessageBox.Show("Are you want to delete this ?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     new_order.DeleteFromCart(dgvCart);
 
-                lblTotal.Text = new_order.Total.ToString();
+                lblTotal.Text = new_order.Total.ToString("C", culture);
             }
         }
 
@@ -145,9 +147,9 @@ namespace SICAP
                     lblReturn.Text = "-";
                     btnBuy.Enabled = false;
                 }
-                else if (Convert.ToInt32(tbPayment.Text) >= Convert.ToInt32(lblTotal.Text))
+                else if (Convert.ToInt32(tbPayment.Text) >= new_order.Total)
                 {
-                    lblReturn.Text = (Convert.ToInt32(tbPayment.Text) - Convert.ToInt32(lblTotal.Text)).ToString();
+                    lblReturn.Text = (Convert.ToInt32(tbPayment.Text) - new_order.Total).ToString("C", culture);
                     btnBuy.Enabled = true;
                 }
                 else
@@ -169,14 +171,21 @@ namespace SICAP
             {
                 new_order.Buy(new_order);
 
-                dgvCart.Rows.Clear();
+                Form_Receipt frm = new Form_Receipt(lblTotal.Text, lblReturn.Text, Convert.ToInt32(tbPayment.Text).ToString("C", culture), sellerName);
+
                 tbPayment.Text = lblTotal.Text = lblReturn.Text = tbSearch.Text = string.Empty;
+                dgvCart.Rows.Clear();
+
+                frm.ShowDialog();
             }                    
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            tbPayment.Text = lblTotal.Text;
+            if (lblTotal.Text == "0")
+                tbPayment.Text = "0";
+            else
+                tbPayment.Text = new_order.Total.ToString();
         }
     }
 }

@@ -52,15 +52,14 @@ namespace SICAP
             this.tbItemName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvInventory = new System.Windows.Forms.DataGridView();
+            this.btnAddItem = new Guna.UI2.WinForms.Guna2Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnAddItem = new Guna.UI2.WinForms.Guna2Button();
             this.pnlSearch.SuspendLayout();
             this.pnlCRUD.SuspendLayout();
             this.pnlCategory.SuspendLayout();
@@ -195,7 +194,7 @@ namespace SICAP
             this.cbItemCategory.Location = new System.Drawing.Point(37, 618);
             this.cbItemCategory.Name = "cbItemCategory";
             this.cbItemCategory.ShadowDecoration.Parent = this.cbItemCategory;
-            this.cbItemCategory.Size = new System.Drawing.Size(82, 36);
+            this.cbItemCategory.Size = new System.Drawing.Size(206, 36);
             this.cbItemCategory.TabIndex = 27;
             this.cbItemCategory.SelectedIndexChanged += new System.EventHandler(this.cbItemCategory_SelectedIndexChanged);
             // 
@@ -449,7 +448,6 @@ namespace SICAP
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column7,
             this.Column8,
             this.Column5,
             this.Column6});
@@ -465,6 +463,27 @@ namespace SICAP
             this.dgvInventory.Size = new System.Drawing.Size(562, 753);
             this.dgvInventory.TabIndex = 7;
             this.dgvInventory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventory_CellClick);
+            // 
+            // btnAddItem
+            // 
+            this.btnAddItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddItem.Animated = true;
+            this.btnAddItem.AutoRoundedCorners = true;
+            this.btnAddItem.BorderRadius = 20;
+            this.btnAddItem.CheckedState.Parent = this.btnAddItem;
+            this.btnAddItem.CustomImages.Parent = this.btnAddItem;
+            this.btnAddItem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(146)))), ((int)(((byte)(84)))));
+            this.btnAddItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddItem.ForeColor = System.Drawing.Color.White;
+            this.btnAddItem.HoverState.Parent = this.btnAddItem;
+            this.btnAddItem.Image = global::SICAP.Properties.Resources.baseline_add_white_48;
+            this.btnAddItem.Location = new System.Drawing.Point(415, 98);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.ShadowDecoration.Parent = this.btnAddItem;
+            this.btnAddItem.Size = new System.Drawing.Size(185, 43);
+            this.btnAddItem.TabIndex = 6;
+            this.btnAddItem.Text = "Add New Item";
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // Column1
             // 
@@ -497,14 +516,6 @@ namespace SICAP
             this.Column4.HeaderText = "Selling Price";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "IDKategori";
-            this.Column7.FillWeight = 60.40609F;
-            this.Column7.HeaderText = "CategoryID";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
             // 
             // Column8
             // 
@@ -547,27 +558,6 @@ namespace SICAP
             this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column6.Text = "Delete";
             this.Column6.UseColumnTextForButtonValue = true;
-            // 
-            // btnAddItem
-            // 
-            this.btnAddItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddItem.Animated = true;
-            this.btnAddItem.AutoRoundedCorners = true;
-            this.btnAddItem.BorderRadius = 20;
-            this.btnAddItem.CheckedState.Parent = this.btnAddItem;
-            this.btnAddItem.CustomImages.Parent = this.btnAddItem;
-            this.btnAddItem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(146)))), ((int)(((byte)(84)))));
-            this.btnAddItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddItem.ForeColor = System.Drawing.Color.White;
-            this.btnAddItem.HoverState.Parent = this.btnAddItem;
-            this.btnAddItem.Image = global::SICAP.Properties.Resources.baseline_add_white_48;
-            this.btnAddItem.Location = new System.Drawing.Point(415, 98);
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.ShadowDecoration.Parent = this.btnAddItem;
-            this.btnAddItem.Size = new System.Drawing.Size(185, 43);
-            this.btnAddItem.TabIndex = 6;
-            this.btnAddItem.Text = "Add New Item";
-            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // Form_Inventory
             // 
@@ -612,15 +602,14 @@ namespace SICAP
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2ComboBox cbItemCategory;
         private Guna.UI2.WinForms.Guna2ComboBox cbSearchCategory;
+        private System.Windows.Forms.Label lblCategoryName;
+        private System.Windows.Forms.Panel pnlCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewButtonColumn Column5;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
-        private System.Windows.Forms.Label lblCategoryName;
-        private System.Windows.Forms.Panel pnlCategory;
     }
 }
