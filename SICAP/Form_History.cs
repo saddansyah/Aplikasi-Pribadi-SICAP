@@ -162,7 +162,7 @@ namespace SICAP
             {
                 if (MessageBox.Show("Are you sure to delete this?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    DeleteHistory(Convert.ToInt32(dgvHistory.Rows[e.ColumnIndex].Cells[1].Value.ToString()));
+                    DeleteHistory(Convert.ToInt32(dgvHistory.CurrentRow.Cells[1].Value.ToString()));
                     DisplayAll();
                 }
             }
