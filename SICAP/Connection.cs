@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace SICAP
 {
-    class Connection
+    public class Connection
     {
         public static SqlConnection GetConn()
         {

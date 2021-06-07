@@ -353,9 +353,9 @@ namespace SICAP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Successful_1 {
+        internal static System.Drawing.Bitmap success {
             get {
-                object obj = ResourceManager.GetObject("Successful_1", resourceCulture);
+                object obj = ResourceManager.GetObject("success", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -65,10 +65,10 @@ namespace SICAP
             this.lblTotal = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.pnlPayment = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.label4 = new System.Windows.Forms.Label();
             this.tbPayment = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnBuy = new Guna.UI2.WinForms.Guna2Button();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label4 = new System.Windows.Forms.Label();
             this.pnlSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
@@ -475,6 +475,17 @@ namespace SICAP
             this.pnlPayment.Size = new System.Drawing.Size(584, 163);
             this.pnlPayment.TabIndex = 24;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label4.Location = new System.Drawing.Point(73, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 21);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Cash :";
+            // 
             // tbPayment
             // 
             this.tbPayment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -532,21 +543,6 @@ namespace SICAP
             this.btnBuy.TextOffset = new System.Drawing.Point(2, 0);
             this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataSource = typeof(SICAP.Order);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(73, 39);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 21);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Cash :";
-            // 
             // Form_Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -558,7 +554,6 @@ namespace SICAP
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimumSize = new System.Drawing.Size(1069, 814);
             this.Name = "Form_Cart";
-            this.Text = "Form_Cart";
             this.Load += new System.EventHandler(this.Form_Cart_Load);
             this.pnlSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();

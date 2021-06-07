@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace SICAP
 {
-    class GetData
+    public class GetData
     {
         private static SqlCommand cmd;
         private static SqlDataAdapter da;

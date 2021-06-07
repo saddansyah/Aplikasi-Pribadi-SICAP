@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace SICAP
 {
-    class Order
+    public class Order
     {
         public int ItemID { get; set; }
         public string ItemName { get; set; }
@@ -17,7 +17,8 @@ namespace SICAP
         public int Qty { get; set; }
         public int Total { get; set; }
         public int Profit { get; set; }
-        private string Seller, Date;
+        public string Seller { get; set; }
+        public string Date { get; set; }
 
         public Order(int id, string name, int price, int qty, string seller)
         {
@@ -136,7 +137,7 @@ namespace SICAP
             }
         }
 
-        public void Buy(Order item)
+        public void Buy()
         {
             string query = "INSERT INTO TBL_Transaksi(NamaKasir, TanggalTransaksi, TotalTransaksi, TotalUntung) VALUES (@SellerName, @Date, @Total, @Profit)";
 

@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace SICAP
 {
-    class Cashier
+    public class Cashier
     {
         public string Username { get; set; }
         public string Name { get; set; }

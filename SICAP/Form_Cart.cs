@@ -174,14 +174,14 @@ namespace SICAP
         {
             if (MessageBox.Show("Are you sure ?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                new_order.Buy(new_order);
+                new_order.Buy();
 
-                Form_Receipt frm = new Form_Receipt(lblTotal.Text, lblReturn.Text, Convert.ToInt32(tbPayment.Text).ToString("C", culture), sellerName);
+                Form_Payment frm = new Form_Payment(lblTotal.Text, lblReturn.Text, Convert.ToInt32(tbPayment.Text).ToString("C", culture), new_order.Seller, new_order.Date, dgvCart);
+                frm.ShowDialog();
 
                 tbPayment.Text = lblTotal.Text = lblReturn.Text = tbSearch.Text = string.Empty;
                 dgvCart.Rows.Clear();
 
-                frm.ShowDialog();
             }                    
         }
 

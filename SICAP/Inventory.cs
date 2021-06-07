@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace SICAP
 {
-    class Inventory
+    public class Inventory
     {
         public int ID { get; set; }
         public string Name { get; set; }

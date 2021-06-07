@@ -51,6 +51,24 @@
     <Reference Include="Guna.UI2, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
@@ -89,6 +107,12 @@
     </Compile>
     <Compile Include="Form_History.Designer.cs">
       <DependentUpon>Form_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Payment.Designer.cs">
+      <DependentUpon>Form_Payment.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Receipt.cs">
       <SubType>Form</SubType>
@@ -135,6 +159,7 @@
     </Compile>
     <Compile Include="Inventory.cs" />
     <Compile Include="Order.cs" />
+    <Compile Include="Payment.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_About.resx">
@@ -161,6 +186,9 @@
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Payment.resx">
+      <DependentUpon>Form_Payment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Receipt.resx">
       <DependentUpon>Form_Receipt.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,8 +200,28 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\Order.datasource" />
+    <None Include="Properties\DataSources\Cashier1.datasource" />
+    <None Include="Properties\DataSources\Category1.datasource" />
+    <None Include="Properties\DataSources\Connection1.datasource" />
+    <None Include="Properties\DataSources\Form_About1.datasource" />
+    <None Include="Properties\DataSources\Form_Cart1.datasource" />
+    <None Include="Properties\DataSources\Form_Cashier1.datasource" />
+    <None Include="Properties\DataSources\Form_Category1.datasource" />
+    <None Include="Properties\DataSources\Form_History1.datasource" />
+    <None Include="Properties\DataSources\Form_Homepage1.datasource" />
+    <None Include="Properties\DataSources\Form_Inventory1.datasource" />
+    <None Include="Properties\DataSources\Form_Login1.datasource" />
+    <None Include="Properties\DataSources\Form_Payment.datasource" />
+    <None Include="Properties\DataSources\Form_SignUp1.datasource" />
+    <None Include="Properties\DataSources\GetData1.datasource" />
+    <None Include="Properties\DataSources\Inventory.datasource" />
+    <None Include="Properties\DataSources\Order1.datasource" />
+    <None Include="Properties\DataSources\Payment.datasource" />
+    <None Include="Properties\DataSources\Program1.datasource" />
+    <None Include="Properties\DataSources\SICAP.Properties.Resources1.datasource" />
+    <None Include="Properties\DataSources\SICAP.Properties.Settings1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -269,7 +317,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database_UNTUNK.mdf</DependentUpon>
     </Content>
-    <None Include="img\Successful_1.gif" />
+    <None Include="img\success.gif" />
     <None Include="img\SICAP icon - Copy.png" />
     <None Include="img\AboutSICAP-02.png" />
     <None Include="img\sharp_history_white_48 - Copy.png" />
@@ -280,5 +328,6 @@
     <None Include="img\baseline_add_white_48.png" />
     <None Include="img\baseline_search_black_48.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
