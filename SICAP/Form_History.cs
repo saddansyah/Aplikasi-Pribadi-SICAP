@@ -197,24 +197,28 @@ namespace SICAP
         {
             if (cbTransaction.Text == "This Day")
             {
+                lblAboveIncome.Text = "with today's income :";
                 DisplayCountTransaction("SELECT COUNT(TotalTransaksi) FROM TBL_Transaksi WHERE TanggalTransaksi = '" + DateTime.Now.ToString("dd") + "-" + DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'");
                 DisplaySumTransaction("SELECT SUM(TotalTransaksi) FROM TBL_Transaksi WHERE TanggalTransaksi = '" + DateTime.Now.ToString("dd") + "-" + DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'");
                 DisplayProfit("SELECT SUM(TotalUntung) FROM TBL_Transaksi WHERE TanggalTransaksi = '" + DateTime.Now.ToString("dd") + "-" + DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'");
             }
             else if (cbTransaction.Text == "This Month")
             {
+                lblAboveIncome.Text = "and this month income :";
                 DisplayCountTransaction("SELECT COUNT(TotalTransaksi) FROM TBL_Transaksi WHERE TanggalTransaksi LIKE '%"+ DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'");
                 DisplaySumTransaction("SELECT SUM(TotalTransaksi) FROM TBL_Transaksi WHERE TanggalTransaksi LIKE '%" + DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'");
                 DisplayProfit("SELECT SUM(TotalUntung) FROM TBL_Transaksi WHERE TanggalTransaksi LIKE '%" + DateTime.Today.ToString("MMMM") + "-" + DateTime.Today.Year.ToString() + "'");
             }
             else if (cbTransaction.Text == "This Year")
             {
+                lblAboveIncome.Text = "and this year income :";
                 DisplayCountTransaction("SELECT COUNT(TotalTransaksi) FROM TBL_Transaksi WHERE TanggalTransaksi LIKE '%" + DateTime.Today.Year.ToString() + "'");
                 DisplaySumTransaction("SELECT SUM(TotalTransaksi) FROM TBL_Transaksi WHERE TanggalTransaksi LIKE '%" + DateTime.Today.Year.ToString() + "'");
                 DisplayProfit("SELECT SUM(TotalUntung) FROM TBL_Transaksi WHERE TanggalTransaksi LIKE '%" + DateTime.Today.Year.ToString() + "'");
             }
             else if (cbTransaction.Text == "All")
             {
+                lblAboveIncome.Text = "and all income from the beginning :";
                 DisplayCountTransaction("SELECT COUNT(TotalTransaksi) FROM TBL_Transaksi ");
                 DisplaySumTransaction("SELECT SUM(TotalTransaksi) FROM TBL_Transaksi");
                 DisplayProfit("SELECT SUM(TotalUntung) FROM TBL_Transaksi");
