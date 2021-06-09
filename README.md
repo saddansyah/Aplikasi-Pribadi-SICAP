@@ -1,5 +1,4 @@
-# SICAP
-## Simple Cashier App
+# SICAP - Simple Cashier App (Windows Form)
 Developed by <code>Saddan Syah Akbar</code> from <code>Information Engineering '20</code> 
 
  ## Features:
@@ -13,7 +12,3 @@ Developed by <code>Saddan Syah Akbar</code> from <code>Information Engineering '
 
 ## Note :
 Change the connection string on Connection.cs with your own datasource to avoid error when rebuild this app.
-
-
-
-
