@@ -1,8 +1,10 @@
 # SICAP - Simple Cashier App (Windows Form)
-<hr>
-![thumbnail](https://user-images.githubusercontent.com/73093118/121889020-e1841f00-cd42-11eb-9f5e-30fb4ed01406.jpg)
-<hr>
-Developed by <code>Saddan Syah Akbar</code> from <code>Information Engineering '20</code> 
+<h3><b>Developed by :</b></h3>
+Saddan Syah Akbar
+<br>
+20/460566/TK/51155
+<br>
+Information Engineering
 
  ## Features:
  - Cashier/Seller Management
