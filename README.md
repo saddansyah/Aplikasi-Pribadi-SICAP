@@ -1,4 +1,6 @@
 # SICAP - Simple Cashier App (Windows Form)
+![SICAP_readme](https://user-images.githubusercontent.com/73093118/121894517-6d994500-cd49-11eb-9c78-41b049a6803b.gif)
+
 <h3><b>Developed by :</b></h3>
 Saddan Syah Akbar
 <br>
